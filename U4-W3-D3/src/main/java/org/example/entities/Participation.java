@@ -30,4 +30,18 @@ public class Participation {
     public Event getEvent() {
         return event;
     }
+
+    public StateParticipation getStateParticipation() {
+        return stateParticipation;
+    }
+
+    @Override
+    public String toString() {
+        return "Participation{" +
+                "id=" + id +
+                ", person=" + person +
+                ", event=" + event +
+                ", stateParticipation=" + stateParticipation +
+                '}';
+    }
 }

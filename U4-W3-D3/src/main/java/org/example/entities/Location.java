@@ -19,4 +19,12 @@ public class Location {
         this.name = name;
         this.city = city;
     }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getCity() {
+        return city;
+    }
 }

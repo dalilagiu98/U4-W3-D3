@@ -21,7 +21,7 @@ public class EventDAO {
             transaction.commit();
             System.out.println("Event " + event.getTitle() + " saved correctly!");
         } catch (Exception e) {
-            System.out.println(e.getMessage());
+            e.printStackTrace();
         }
     }
 

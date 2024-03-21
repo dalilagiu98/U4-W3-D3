@@ -35,4 +35,19 @@ public class Person {
     public String getSurname() {
         return surname;
     }
+
+    public List<Participation> getParticipationList() {
+        return participationList;
+    }
+
+    @Override
+    public String toString() {
+        return "Person{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", surname='" + surname + '\'' +
+                ", email='" + email + '\'' +
+                ", localDate=" + localDate +
+                ", gender=" + gender;
+    }
 }

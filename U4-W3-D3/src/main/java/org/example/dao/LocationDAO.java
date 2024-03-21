@@ -17,6 +17,7 @@ public class LocationDAO {
             transaction.begin();
             em.persist(location);
             transaction.commit();
+            System.out.println("Location " + location.getName() + " in " + location.getCity() + " saved!");
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }
