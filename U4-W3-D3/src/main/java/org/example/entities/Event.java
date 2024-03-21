@@ -3,6 +3,8 @@ package org.example.entities;
 import jakarta.persistence.*;
 
 import java.time.LocalDate;
+import java.util.List;
+
 @Entity
 public class Event {
 
@@ -16,20 +18,22 @@ public class Event {
     @Enumerated(EnumType.STRING)
     private EventType eventType;
     private int maxNumberParticipants;
+    @ManyToOne
+    @JoinColumn
     private Location location;
-    private Participation participation;
+    @OneToMany(mappedBy = "event" )
+    private List<Participation> participation;
 
 
     //CONSTRUCTORS:
     public Event() {}
-    public Event(String title, LocalDate eventDate, String description, EventType eventType, int maxNumberParticipants, Location location, Participation participation) {
+    public Event(String title, LocalDate eventDate, String description, EventType eventType, int maxNumberParticipants, Location location) {
         this.title = title;
         this.eventDate = eventDate;
         this.description = description;
         this.eventType = eventType;
         this.maxNumberParticipants = maxNumberParticipants;
         this.location = location;
-        this.participation = participation;
     }
 
     public String getTitle() {
