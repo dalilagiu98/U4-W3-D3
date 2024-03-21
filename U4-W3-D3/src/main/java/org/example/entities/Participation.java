@@ -22,4 +22,12 @@ public class Participation {
         this.event = event;
         this. stateParticipation = stateParticipation;
     }
+
+    public Person getPerson() {
+        return person;
+    }
+
+    public Event getEvent() {
+        return event;
+    }
 }
