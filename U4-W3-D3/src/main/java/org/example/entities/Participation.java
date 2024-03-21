@@ -12,5 +12,13 @@ public class Participation {
     private long id;
     private Person person;
     private Event event;
-    private StateParticipation statePartecipation;
+    private StateParticipation stateParticipation;
+
+    public Participation(){}
+
+    public Participation(Person person, Event event, StateParticipation stateParticipation) {
+        this.person = person;
+        this.event = event;
+        this. stateParticipation = stateParticipation;
+    }
 }
