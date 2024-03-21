@@ -20,4 +20,15 @@ public class Person {
     private Gender gender;
     private List<Participation> participationList;
 
+    public Person(){}
+
+    public Person(String name, String surname, String email, LocalDate localDate, Gender gender, List<Participation> participationList) {
+        this.name = name;
+        this.surname = surname;
+        this.email = email;
+        this.localDate = localDate;
+        this.gender = gender;
+        this.participationList = participationList;
+    }
+
 }
