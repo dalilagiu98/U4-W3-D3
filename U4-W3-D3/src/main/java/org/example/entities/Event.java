@@ -16,16 +16,20 @@ public class Event {
     @Enumerated(EnumType.STRING)
     private EventType eventType;
     private int maxNumberParticipants;
+    private Location location;
+    private Participation participation;
 
 
     //CONSTRUCTORS:
     public Event() {}
-    public Event(String title, LocalDate eventDate, String description, EventType eventType, int maxNumberParticipants) {
+    public Event(String title, LocalDate eventDate, String description, EventType eventType, int maxNumberParticipants, Location location, Participation participation) {
         this.title = title;
         this.eventDate = eventDate;
         this.description = description;
         this.eventType = eventType;
         this.maxNumberParticipants = maxNumberParticipants;
+        this.location = location;
+        this.participation = participation;
     }
 
     public String getTitle() {
